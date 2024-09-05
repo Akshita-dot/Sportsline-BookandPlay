@@ -4,8 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sportsline</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
 </head>
 <body>
     
+
+    <div class="UserLogin flex-column gap-2">
+        <div class="LoginBox">
+            <div class="logo-line">
+                <img src="Images/sportsline_logo.jpg" alt="">
+            </div>
+            <div class="box-heading">Login</div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumber" aria-describedby="phoneHelp" placeholder="Enter Phone Number">
+                    <div id="phoneError" class="text-danger"></div>
+                </div>
+                <div class="breakText d-flex">
+                    <hr>
+                    <div class="OR">OR</div>
+                    <hr>
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email Address</label>
+                    <input type="email" class="form-control" id="emailAddress" placeholder="Enter Email Address">
+                    <div id="emailError" class="text-danger"></div>
+                </div>
+                <div class="form-btn text-center">
+                    <button type="submit" id="send-otp-btn" class="btn btn-primary">Send OTP</button>
+                </div>
+            </form>
+            <div class="alternative text-center">Didn't have an account? <a href="">Register Now</a></div>
+        </div>
+        
+
+        <div class="card OtpBox position-relative text-center">
+            <div class="logo-line d-none">
+                <img src="Images/sportsline_logo.jpg" alt="">
+            </div>
+            <i class="fa-solid fa-xmark fa-xl position-absolute cross-otp" style="right:20px;top: 30px;"></i>
+            <p class="otp-heading">Please enter One-Time Password to verify your account</p>
+            <div class="otp-text d-flex">
+                <div>One-Time Password has send to <span style="white-space: nowrap;">+91 98765 43210</span></div>
+                <div><span style="color:#757575;padding-inline: 15px;">Edit</span></div>
+           </div>
+            <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2"> <input class="m-2 text-center form-control rounded" type="text" id="first" maxlength="1" /> <input class="m-2 text-center form-control rounded" type="text" id="second" maxlength="1" /> <input class="m-2 text-center form-control rounded" type="text" id="third" maxlength="1" /> <input class="m-2 text-center form-control rounded" type="text" id="fourth" maxlength="1" /> </div>
+            <p class="resend">Didn't receive OTP? Resend OTP in 01:59 mins</p>
+            <p class="resend" style="color: #006DC0; text-decoration: underline;">Resend OTP</p>
+            <div class="form-btn text-center">
+                <button type="submit" id="submit-otp-btn" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
